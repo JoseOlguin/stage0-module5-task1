@@ -134,16 +134,16 @@ public class ArrayTasks {
         int length = arr.length;
 
         int[][] result = new int[length][];
-        int[][] bySize = sortByLength(arr);
+        int[][] indexBySize = sortIndexBySize(arr);
 
         for (int i = 0; i < length; i++){
-            result[i] = sortByData(arr[bySize[i][0]]);
+            result[i] = sortByData(arr[indexBySize[i][0]]);
         }
 
         return result;
     }
 
-    private int[][] sortByLength(int[][] arr) {
+    private int[][] sortIndexBySize(int[][] arr) {
         int length = arr.length;
         int[][] result = new int[length][2];
 
